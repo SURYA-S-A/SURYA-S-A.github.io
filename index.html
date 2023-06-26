@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -149,16 +149,23 @@
 
             .briefcontainer{
                 display:flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
                 padding: 50px;
                 margin: 50px;
             }
 
-            .briefcontainer .breif-1{
-                display:flex;
-            }
+        .card-details .card-heading p {
+            background-color: black;
+            padding: 20px;
+            opacity: 0.5;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+        }
 
-        .card {
+        .card-1 {
             background-image: url(assest/images/robotics.jpg);
             background-size: contain; 
             background-repeat: no-repeat;
@@ -170,7 +177,24 @@
             text-align: center;
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s ease;
+        }
+
+        .card-2 {
+            background-image: url(assest/images/server.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 450px;
+            height: 285px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
             transition: transform 0.5s ease;
         }
@@ -230,14 +254,24 @@
             <p class="exploreheading">Explore our innovative solutions</p>
             <div class="briefcontainer">
                 <div class="breif-1">
-                    <div class="card">
+                    <div class="card-1">
                         <div class="card-details">
+                            <div class="card-heading">
+                                <p>Robotics</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="breif-2">
-                    sdffd
+                    <div class="card-2">
+                        <div class="card-details">
+                            <div class="card-heading">
+                                <p>Server maintenance</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </section>
     </main>
