@@ -1,0 +1,230 @@
+﻿* {
+    font-family: Arial;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topheader {
+    background-color: #333;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+.logo {
+    float: left;
+}
+
+.pagelinks:hover {
+    background-color: rgb(240, 21, 68);
+    transform: scale(1.1);
+}
+
+.logo img {
+    height: 30px;
+}
+
+li.logo {
+    margin-left: 20px;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid red;
+}
+
+.container {
+    width: 100%;
+}
+
+.landingimage {
+    height: 50vh;
+    background-image: url("../assest/images/contactus.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .landingimage p {
+        background-color: black;
+        padding: 20px;
+        opacity: 0.5;
+        color: white;
+        font-weight: bold;
+        font-size: 3em;
+    }
+
+.contactus {
+    margin: 50px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50%;
+}
+
+    .contactus .contactusform {
+        padding: 5px 50px;
+        width: 800px;
+    }
+
+.contactusheading {
+    padding: 10px;
+    background-color: rgb(240, 21, 68);
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.form-group input {
+    margin: 15px 0px 15px 0px;
+    border: none;
+    width: 100%;
+    height: 30px;
+    background: white;
+    border-bottom: 2px solid lightgrey;
+}
+
+.form-group select {
+    margin: 15px 0px 15px 0px;
+    border: none;
+    width: 100%;
+    height: 30px;
+    background: white;
+    border-bottom: 2px solid lightgrey;
+}
+
+.form-group textarea {
+    margin: 15px 0px 15px 0px;
+    border: none;
+    width: 100%;
+    height: 75px;
+    background: white;
+    border-bottom: 2px solid lightgrey;
+}
+
+.form-group input:hover {
+    background: white;
+    border-bottom: 2px solid rgb(255, 21, 71);
+}
+
+.form-group input:focus {
+    background: white;
+    outline: none;
+    border-bottom: 2px solid rgb(189, 16, 53);
+}
+
+.form-group textarea:hover {
+    background: white;
+    border-bottom: 2px solid rgb(255, 21, 71);
+}
+
+.form-group textarea:focus {
+    background: white;
+    outline: none;
+    border-bottom: 2px solid rgb(189, 16, 53);
+}
+
+.form-group button {
+    text-align: center;
+    border: none;
+    width: 50%;
+    padding: 10px;
+    background-color: rgb(240, 21, 68);
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+}
+
+    .form-group button:hover {
+        background: rgb(255, 21, 71);
+    }
+
+    .form-group button:active {
+        background: rgb(189, 16, 53);
+    }
+
+.contactusmap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+}
+
+    .contactusmap iframe {
+        padding: 20px;
+    }
+
+.footersection {
+    background: lightgrey;
+}
+
+address {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+    address .branch {
+        border: 2px solid #bbb;
+        margin: 20px;
+        padding: 20px;
+    }
+
+footer {
+    background-color: #333;
+}
+
+.bottom-navbar {
+    list-style-type: none;
+}
+
+footer .copyright {
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+footer .social {
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+    footer .social .icon {
+        float: left;
+        margin: 12px;
+        height: 25px;
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+    }
+
+span {
+    color: red;
+}

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/contact-us.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="topheader">
+            <nav class="navbar">
+                <ul>
+                    <li class="logo"><a href="../index.html"><img src="../assest/logo/companylogo.png" alt="Company Logo"></a></li>
+                    <li class="pagelinks"><a href="/pages/contact-us.html">Contact us</a></li>
+                    <li class="pagelinks"><a href="/pages/about-us.html">About us</a></li>
+                    <li class="pagelinks"><a href="/pages/sign-in.html">Sign in</a></li>
+                    <li class="pagelinks"><a href="/pages/sign-up.html">Sign up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="landingimage">
+            <p>Contact Us</p>
+        </div>
+        <p class="contactusheading">Contact Us</p>
+        <div class="contactus">
+            <form class="contactusform" novalidate onsubmit="validatingForm(event)">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Name*" onblur="validation()">
+                    <span id="nameerror"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="mailid" placeholder=" Email*" onblur="validation()">
+                    <span id="mailiderror"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="companyname" placeholder="Company Name*" onblur="validation()">
+                    <span id="companynameerror"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Message" onblur="validation()"></textarea>
+                    <span id="messageerror"></span>
+                </div>
+                <div class="form-group">
+                    <button>Send Message</button>
+                </div>
+            </form>
+        </div>
+        <section class="contactusmap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15716.484121474416!2d76.3739046!3d10.0068604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080b659f4531e7%3A0x3211283aa080f0f3!2sInfopark%20Kochi%20Phase%202!5e0!3m2!1sen!2sin!4v1687617011559!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.723036285785!2d-84.37596002346405!3d39.27185032452209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8840517449f5b377%3A0xbf28d57375fb95ec!2sClaySys%20Technologies!5e0!3m2!1sen!2sin!4v1687723013489!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.392377181526!2d76.94822407592952!3d11.009158754855989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859ff537c14fd%3A0x335e73d2c3470cc!2sClaySys%20Technologies!5e0!3m2!1sen!2sin!4v1687722946973!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </div>
+    <footer>
+        <div class="social">
+            <a href="#">
+                <img class="icon" src="../assest/icons/maillogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/instagramlogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/twitterlogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/linkedinlogo.png" />
+            </a>
+        </div>
+        <ul class="bottom-navbar">
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2023, SAS Creation All Rights Reserved</p>
+    </footer>
+
+    <script src="../js/contact-us.js"></script>
+
+</body>
+</html>

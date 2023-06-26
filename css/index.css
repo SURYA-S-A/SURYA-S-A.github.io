@@ -1,0 +1,216 @@
+﻿* {
+    font-family: Arial;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.topheader {
+    background-color: #333;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+.logo {
+    float: left;
+}
+
+.pagelinks:hover {
+    background-color: rgb(240, 21, 68);
+    transform: scale(1.1);
+}
+
+.logo img {
+    height: 30px;
+}
+
+li.logo {
+    margin-left: 20px;
+}
+
+#main-content {
+    flex: 1;
+}
+
+footer {
+    background-color: #333;
+}
+
+.bottom-navbar {
+    list-style-type: none;
+}
+
+footer .copyright {
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+footer .social {
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+    footer .social .icon {
+        float: left;
+        margin: 12px;
+        height: 25px;
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+    }
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: 0px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    .prev:hover, .next:hover {
+        background-color: #717171;
+    }
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.explore {
+    background-color: rgb(235, 237, 245);
+}
+
+    .explore .exploreheading {
+        padding: 10px;
+        background-color: rgb(240, 21, 68);
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+.briefcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;
+}
+
+.card-details .card-heading p {
+    background-color: black;
+    padding: 20px;
+    opacity: 0.5;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.card-1 {
+    background-image: url('../assest/images/robotics.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 450px;
+    height: 285px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+.card-2 {
+    background-image: url('../assest/images/server.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 450px;
+    height: 285px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+.card-details {
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+    .card-details h1 {
+        font-size: 2em;
+    }
+
+.person {
+    width: 50%;
+    height: 50%;
+}
+
+.icon {
+    height: 30px;
+}

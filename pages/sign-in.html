@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="../css/sign-in.css" />
+</head>
+<body>
+    <header class="topheader">
+        <nav class="navbar">
+            <ul>
+                <li class="logo"><a href="../index.html"><img src="../assest/logo/companylogo.png" alt="Company Logo"></a></li>
+                <li class="pagelinks"><a href="/pages/contact-us.html">Contact us</a></li>
+                <li class="pagelinks"><a href="/pages/about-us.html">About us</a></li>
+                <li class="pagelinks"><a href="/pages/sign-in.html">Sign in</a></li>
+                <li class="pagelinks"><a href="/pages/sign-up.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="heading">
+                <h1>Sign in</h1>
+            </div>
+            <form class="loginform" novalidate onsubmit="validatingForm(event)">
+                <div class="form-group">
+                    <input type="email" id="mailid" placeholder="Email address" onblur="validation()" />
+                    <span id="mailiderror"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" onblur="validation()" />
+                    <span id="passworderror"></span>
+                </div>
+                <div class="small">
+                    <div class="form-group-checkbox">
+                        <label for="rememberme">
+                            <input type="checkbox" id="rememberme" name="rememberme" />
+                            Remember me
+                        </label>
+                    </div>
+                    <div class="form-group-notamember">
+                        <label>
+                            <a href="#">Forget password?</a>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button>Sign in</button>
+                </div>
+                <div class="form-group">
+                    <label class="notamember">
+                        Not a Member? <a href="#"> Sign up</a>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="#">
+                <img class="icon" src="../assest/icons/maillogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/instagramlogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/twitterlogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/linkedinlogo.png" />
+            </a>
+        </div>
+        <ul class="bottom-navbar">
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2023, SAS Creation All Rights Reserved</p>
+    </footer>
+
+    <script src="../js/sign-in.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../css/sign-up.css" />
+</head>
+<body>
+    <header class="topheader">
+        <nav class="navbar">
+            <ul>
+                <li class="logo"><a href="../index.html"><img src="../assest/logo/companylogo.png" alt="Company Logo"></a></li>
+                <li class="pagelinks"><a href="/pages/contact-us.html">Contact us</a></li>
+                <li class="pagelinks"><a href="/pages/about-us.html">About us</a></li>
+                <li class="pagelinks"><a href="/pages/sign-in.html">Sign in</a></li>
+                <li class="pagelinks"><a href="/pages/sign-up.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <form class="signupform" novalidate onsubmit="validatingForm(event)">
+                <div class="heading">
+                    <h1>Sign up</h1>
+                </div>
+                <div class="signupformbody">
+                    <div class="form-group">
+                        <span>* </span><label for="firstname">First name</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Enter the first name" onblur="validation()" required />
+                        <span id="firstnameerror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="lastname">Last name</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Enter the last name" onblur="validation()" required />
+                        <span id="lastnameerror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="dateofbirth">Date of birth</label>
+                        <input type="date" class="form-control" onchange="calculateAge()" id="dateofbirth" onblur="validation()" required />
+                        <span id="dateofbirtherror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="age">Age</label>
+                        <input type="text" class="form-control" id="age" onblur="validation()" required disabled />
+                        <span id="ageerror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="gender">Gender</label>
+                        <select class="form-control" id="gender" onblur="validation()">
+                            <option value="Select">---Select gender---</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                        <span id="gendererror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="phonenumber">Phone number</label>
+                        <input class="form-control" type="number" id="phonenumber" onblur="validation()" placeholder="Enter phone number" required />
+                        <span id="phonenumbererror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="address">Address</label>
+                        <textarea class="form-control" id="address" placeholder="Enter the address" onblur="validation()" required></textarea>
+                        <span id="addresserror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="state">State</label>
+                        <select class="form-control" id="state" onchange="loadCities()" onblur="validation()">
+                        </select>
+                        <span id="stateerror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="city">City</label>
+                        <select class="form-control" id="city" onblur="validation()">
+                            <option value="Select">---Select city---</option>
+                        </select>
+                        <span id="cityerror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="username">Username</label>
+                        <input class="form-control" type="text" id="username" placeholder="Username" onblur="validation()" required />
+                        <span id="usernameerror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="password">Password</label>
+                        <input class="form-control" type="password" id="password" placeholder="Password" onblur="validation()" required />
+                        <span id="passworderror"></span>
+                    </div>
+                    <div class="form-group">
+                        <span>* </span><label for="confirmpassword">Confirm password</label>
+                        <input class="form-control" type="password" id="confirmpassword" placeholder="Retype password to confirm" onblur="validation()" required />
+                        <span id="confirmpassworderror"></span>
+                    </div>
+                    <div class="form-group">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="#">
+                <img class="icon" src="../assest/icons/maillogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/instagramlogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/twitterlogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/linkedinlogo.png" />
+            </a>
+        </div>
+        <ul class="bottom-navbar">
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2023, SAS Creation All Rights Reserved</p>
+    </footer>
+
+   <script src="../js/sign-up.js"></script>
+</body>
+</html>
