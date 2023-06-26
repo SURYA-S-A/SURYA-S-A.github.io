@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Sign in</title>
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        body {
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .topheader {
+            background-color: #333;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .logo {
+            float: left;
+        }
+
+        .pagelinks:hover {
+            background-color: rgb(240, 21, 68);
+            transform: scale(1.1);
+        }
+
+        .logo img {
+            height: 30px;
+        }
+
+        li.logo {
+            margin-left: 20px;
+        }
+
+        .container {
+            width: 500px;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            background-color: white;
+            box-shadow: 0 30px 50px 0 rgba(0,0,0,.1);
+        }
+
+        .heading {
+            width: 100%;
+            background-color: rgb(240, 21, 68);
+        }
+
+            .heading h1 {
+                margin: 15px;
+                color: white;
+                text-align: center;
+            }
+
+        .loginform {
+            margin: 30px;
+        }
+
+        .small {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            padding: 10px;
+        }
+
+        .form-group-checkbox {
+            display: flex;
+        }
+
+        .form-group-notamember {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .form-group input {
+            margin: 15px 0px 15px 0px;
+            border: none;
+            width: 100%;
+            height: 30px;
+            background: white;
+            border-bottom: 2px solid lightgrey;
+        }
+
+            .form-group input:hover {
+                background: white;
+                border-bottom: 2px solid rgb(255, 21, 71);
+            }
+
+            .form-group input:focus {
+                background: white;
+                outline: none;
+                border-bottom: 2px solid rgb(189, 16, 53);
+            }
+
+            .form-group input[type=checkbox] {
+                height: 15px;
+            }
+
+        .form-group .checkboxforrememberme {
+            display: flex;
+            align-items: center;
+            color: cadetblue;
+        }
+
+        .form-group button {
+            text-align: center;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(240, 21, 68);
+            font-size: 16px;
+            font-weight: normal;
+            color: white;
+        }
+
+            .form-group button:hover {
+                background: rgb(255, 21, 71);
+            }
+
+            .form-group button:active {
+                background: rgb(189, 16, 53);
+            }
+
+        .form-group .notamember {
+            margin: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: red;
+        }
+
+        footer {
+            background-color: #333;
+        }
+
+        .bottom-navbar {
+            list-style-type: none;
+        }
+
+        footer .copyright {
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+
+        footer .social {
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+
+            footer .social .icon {
+                float: left;
+                margin: 12px;
+                height: 25px;
+                filter: invert(100%);
+                -webkit-filter: invert(100%);
+            }
+
+            span{
+                color: red;
+            }
+    </style>
+</head>
+<body>
+    <header class="topheader">
+        <nav class="navbar">
+            <ul>
+                <li class="logo"><a href="../index.html"><img src="../assest/logo/companylogo.png" alt="Company Logo"></a></li>
+                <li class="pagelinks"><a href="/pages/ContactUs.html">Contact us</a></li>
+                <li class="pagelinks"><a href="/pages/AboutUs.html">About us</a></li>
+                <li class="pagelinks"><a href="/pages/SignInForm.html">Sign in</a></li>
+                <li class="pagelinks"><a href="/pages/SignUpForm.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="heading">
+                <h1>Sign in</h1>
+            </div>
+            <form class="loginform" novalidate onsubmit="validatingForm(event)">
+                <div class="form-group">
+                    <input type="email" id="mailid" placeholder="Email address" onblur="validation()" />
+                    <span id="mailiderror"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" onblur="validation()" />
+                    <span id="passworderror"></span>
+                </div>
+                <div class="small">
+                    <div class="form-group-checkbox">
+                        <label for="rememberme">
+                            <input type="checkbox" id="rememberme" name="rememberme" />
+                            Remember me
+                        </label>
+                    </div>
+                    <div class="form-group-notamember">
+                        <label>
+                            <a href="#">Forget password?</a>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button>Sign in</button>
+                </div>
+                <div class="form-group">
+                    <label class="notamember">
+                        Not a Member? <a href="#"> Sign up</a>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="#">
+                <img class="icon" src="../assest/icons/maillogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/instagramlogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/twitterlogo.png" />
+            </a>
+            <a href="#">
+                <img class="icon" src="../assest/icons/linkedinlogo.png" />
+            </a>
+        </div>
+        <ul class="bottom-navbar">
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Copyright © 2023, SAS Creation All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function validatingForm(event) {
+            event.preventDefault();            
+
+            validation();
+        }
+
+        function validation(){
+            clearError('mailid');
+            clearError('password');
+
+            var emailAddressInput = document.getElementById('mailid');
+            var passwordInput = document.getElementById('password');
+
+            const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!(regexEmail.test(emailAddressInput.value))) {
+                displayError('mailid', 'Email should be in correct format');
+            } else if (emailAddressInput.value === "") {
+                displayError('mailid', 'Email should not be empty');
+            }
+
+            if (passwordInput.value === "") {
+                displayError('password', 'Password should not be empty');
+            }
+
+            function displayError(fieldName, errorMessage) {
+                document.getElementById(fieldName + 'error').textContent = errorMessage;
+            }
+
+            function clearError(fieldName) {
+                document.getElementById(fieldName + 'error').textContent = "";
+            }
+
+            document.getElementById('mailid').addEventListener('input', function () {
+                clearError('mailid');
+            })
+
+            document.getElementById('password').addEventListener('input', function () {
+                clearError('password');
+            })
+        }
+
+    </script>
+
+</body>
+</html>
